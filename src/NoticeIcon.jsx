@@ -33,6 +33,7 @@ class NoticeIcon extends React.Component {
 
   static propTypes = {
     prefixCls: PropTypes.string,
+    overlayClassName: PropTypes.string,
     icon:PropTypes.string,
     title:PropTypes.string,
     dot:PropTypes.bool,
@@ -58,7 +59,7 @@ class NoticeIcon extends React.Component {
   }
 
   render() {
-    const {prefixCls,icon,title,dot,count,overflowCount,placement,trigger,emptyText,topAction,bottomAction,emptyIcon,children,onVisibleChange} = this.props
+    const {prefixCls,icon,title,dot,count,overflowCount,placement,trigger,emptyText,topAction,bottomAction,emptyIcon,children,onVisibleChange,overlayClassName} = this.props
     
     // props of bottom action could be Function|Array Object|Object
     let type = Object.prototype.toString.call(bottomAction).slice(8,-1)
@@ -112,17 +113,17 @@ class NoticeIcon extends React.Component {
     </div>)
 
     return (
-      <div>
+      <div className={overlayClassName}>
         <Popover 
           overlay={overlay} 
-          overlayClassName={`${prefixCls}-popover `}
+          overlayClassName={`${prefixCls}-popover`}
           placement={placement} 
           trigger={trigger} 
           {...(onVisibleChange) ? {onVisibleChange:onVisibleChange} : {}} >
           <Button className={`${prefixCls}-button`}>
             <Badge 
               dot = {dot} 
-              count={count} 
+              count={count}              
               overflowCount={overflowCount}>
               <Icon name={icon} className={`${prefixCls}-dot`}/>
             </Badge>

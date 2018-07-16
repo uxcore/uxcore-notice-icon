@@ -5,23 +5,21 @@
  * Copyright 2017-2018, Uxcore Team, Alinw.
  * All rights reserved.
  */
- @import "../node_modules/uxcore-popover/build/Popover";
 
 @__notice-prefix-cls: kuma-notice;
-@__popover-prefix-cls:kuma-popover;
 @_icon-size:20px;
 @_icon-size-small:16px;
 
 .@{__notice-prefix-cls} {
     &-popover {
-        & .@{__popover-prefix-cls}-content .@{__popover-prefix-cls}-inner{
+        & .kuma-popover-content .kuma-popover-inner{
             max-width:320px;
             padding:0;
         }
     }
     &-container{
-        min-height: 320px - @__popover-arrow-width;
-        max-height: 500px - @__popover-arrow-width;
+        min-height: 320px;
+        max-height: 500px;
         display: flex;
         flex-direction: column;
         justify-content:space-between;

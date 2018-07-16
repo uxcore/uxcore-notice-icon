@@ -34,11 +34,7 @@ class Demo extends React.Component {
     // let bottomAction = _ => <Button/>
     return (
       <div>
-        <NoticeIcon 
-          topAction={topAction} 
-          emptyText="暂无待办任务" 
-          onVisibleChange={this.onVisibleChange} 
-          bottomAction = {bottomAction}>
+        <NoticeIcon>
           {/* <div style={{width:'100%',height:'100px'}}></div>
           <div style={{width:'100%',height:'100px'}}></div>
           <div style={{width:'100%',height:'100px'}}></div>
