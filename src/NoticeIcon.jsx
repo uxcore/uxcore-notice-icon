@@ -24,11 +24,11 @@ class NoticeIcon extends React.Component {
     dot:false,
     count:0,
     overflowCount:99,
-    placement:'bottom',
+    placement:'bottomRight',
     trigger:'click',
     emptyText:'暂无数据',
     topAction:<span>操作</span>,
-    bottomAction:{"text":"查看通知","action":()=>{console.log("Clicked")}}
+    bottomAction:{"text":"查看通知","action":()=>{}}
   };
 
   static propTypes = {

@@ -29,7 +29,7 @@
     &-top{
         box-sizing: border-box;
         padding: 13px 18px;
-        border-bottom:1px solid @split-line-color;
+        border-bottom:1px solid @normal-alpha-7;
         display: flex;
         justify-content:space-between;
         align-items: center;
@@ -47,12 +47,12 @@
         }
     }
     &-bottom{
-        border-top:1px solid @split-line-color;
+        border-top:1px solid @normal-alpha-7;
         &-wrap{
             display: flex;
         }
         &-text{
-            background-color:@bg-disabled-color;
+            background-color: @normal-alpha-9;
             text-align: center;
             flex-grow:1;
             line-height: 42px;
@@ -63,7 +63,7 @@
     &-dot {
         vertical-align: middle;
         font-size: @_icon-size;
-        color: salmon; /* should be removed */
+        color:salmon; /* should be removed */
         & + .kuma-badge-dot{
             width: 6px;
             height: 6px;

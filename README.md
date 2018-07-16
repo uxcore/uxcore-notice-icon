@@ -80,6 +80,7 @@ Yes please! See the [CONTRIBUTING](https://github.com/uxcore/uxcore/blob/master/
 |overflowCount|number|optional|99|通知封顶的数字|
 |trigger|string|optional|hover|trigger mode：'hover' or 'click'|
 |title|string|optional|通知|通知标题|
+|placement|string|optional|bottomRight|箭头位置|
 |emptyIcon|string|optional|默认图标|其他可选：'access_restriction','acitve_empty','request_error','search_empty','unknown_error';http://uxco.re/components/icon/|
 |emptyText|string|optional|暂无数据|占位文字|
 |onVisibleChange|function|optional|fuction(visible)|显隐状态的回调
