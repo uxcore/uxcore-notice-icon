@@ -5,4 +5,89 @@
  * Copyright 2017-2018, Uxcore Team, Alinw.
  * All rights reserved.
  */
+ @import "../node_modules/uxcore-popover/build/Popover";
 
+@__notice-prefix-cls: kuma-notice;
+@__popover-prefix-cls:kuma-popover;
+@_icon-size:20px;
+@_icon-size-small:16px;
+
+.@{__notice-prefix-cls} {
+    &-popover {
+        & .@{__popover-prefix-cls}-content .@{__popover-prefix-cls}-inner{
+            max-width:320px;
+            padding:0;
+        }
+    }
+    &-container{
+        min-height: 320px - @__popover-arrow-width;
+        max-height: 500px - @__popover-arrow-width;
+        display: flex;
+        flex-direction: column;
+        justify-content:space-between;
+    }
+    &-top{
+        box-sizing: border-box;
+        padding: 13px 18px;
+        border-bottom:1px solid @split-line-color;
+        display: flex;
+        justify-content:space-between;
+        align-items: center;
+    }
+    &-list{
+        flex-grow: 1;
+        overflow: auto;
+        position: relative;
+        & .@{__notice-prefix-cls}-empty{
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+            user-select:none;
+        }
+    }
+    &-bottom{
+        border-top:1px solid @split-line-color;
+        &-wrap{
+            display: flex;
+        }
+        &-text{
+            background-color:@bg-disabled-color;
+            text-align: center;
+            flex-grow:1;
+            line-height: 42px;
+            cursor: pointer;
+            user-select:none;
+        }
+    }
+    &-dot {
+        vertical-align: middle;
+        font-size: @_icon-size;
+        color: salmon; /* should be removed */
+        & + .kuma-badge-dot{
+            width: 6px;
+            height: 6px;
+            top:-3px;
+            box-shadow: none;
+        }
+        &-small{
+            font-size:@_icon-size-small;
+        }
+    }
+    &-button{
+        background-color: transparent;
+        border: 0px;
+        width:20px;
+        height: 20px;
+        padding:0;
+        line-height: 0;
+        &:hover{
+            background-color:transparent;
+        }
+    }
+    &-title{
+        vertical-align: middle;
+        margin-left: 10px;
+        user-select:none;
+    }
+}
