@@ -10,28 +10,27 @@ import React from 'react';
 import NoticeIcon from '../src';
 
 class Demo extends React.Component {
-
   constructor(props) {
     super(props);
     this.state = {
     };
   }
-  onBottomClick(){
-    console.log("Bottom action bar is clicked")
+  onBottomClick() {
+    console.log('Bottom action bar is clicked');
   }
-  onTopClick(){
-    console.log("Top action is activated")
+  onTopClick() {
+    console.log('Top action is activated');
   }
-  onVisibleChange(isDisplay){
-    console.log(isDisplay)
+  onVisibleChange(isDisplay) {
+    console.log(isDisplay);
   }
   render() {
-    let topAction = <span onClick={this.onTopClick}>操作</span>
-    // let bottomAction = [{"text":"查看通知","action":function(){console.log("Left Clicked")}},
+    // const topAction = <span onClick={this.onTopClick}>操作</span>;
+    // const bottomAction = [{"text":"查看通知","action":function(){console.log("Left Clicked")}},
     //                     {"text":"查看通知","action":function(){console.log("Middle Clicked")}},
     //                     {"text":"查看通知","action":function(){console.log("Right Clicked")}}]
-    let bottomAction = {"text":"查看通知","action":function(){console.log("Clicked")}}
-    // let bottomAction = _ => <Button/>
+    // const bottomAction = { text: '查看通知', action() { console.log('Clicked'); } };
+    // const bottomAction = _ => <Button/>
     return (
       <div>
         <NoticeIcon>
