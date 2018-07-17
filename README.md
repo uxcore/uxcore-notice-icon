@@ -85,15 +85,15 @@ Yes please! See the [CONTRIBUTING](https://github.com/uxcore/uxcore/blob/master/
 |emptyText|string|optional|暂无数据|占位文字|
 |onVisibleChange|function|optional|fuction(visible)|显隐状态的回调
 |topAction|React Element|optional|-|右上角操作|
-|actionBar|object \| render function|optional|-|支持默认\*和自定义形式|
+|bottomAction|object \| render function|optional|-|支持默认\*和自定义形式|
 
 \*
 如果propTypes为object则使用默认样式渲染，object需按如下定义
 
 ```js
 {
-    "text": string,
-    "action": function
+    text: string,
+    action: function
 }
 ```
 
