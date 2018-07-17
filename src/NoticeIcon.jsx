@@ -27,7 +27,6 @@ class NoticeIcon extends React.Component {
     placement:'bottomRight',
     trigger:'click',
     emptyText:'暂无数据',
-    topAction:<span>操作</span>,
     bottomAction:{"text":"查看通知","action":()=>{}}
   };
 
@@ -43,7 +42,7 @@ class NoticeIcon extends React.Component {
     'topLeft', 'bottomLeft', 'leftTop', 'rightTop', 'topRight', 'bottomRight',
     'leftBottom', 'rightBottom']),
     trigger: PropTypes.oneOf(['hover', 'click']),
-    emptyIcon:PropTypes.oneOf(['access_restriction','acitve_empty','request_error','search_empty','unknown_error']),
+    emptyIcon:PropTypes.oneOf(['access_restriction','active_empty','request_error','search_empty','unknown_error']),
     emptyText:PropTypes.string,
     topAction:PropTypes.element,
     bottomAction:PropTypes.oneOfType([PropTypes.object, PropTypes.func,PropTypes.array]),
