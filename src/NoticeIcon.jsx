@@ -96,7 +96,7 @@ class NoticeIcon extends React.Component {
     let overlay = 
     (<div className={`${prefixCls}-container`}>
       <div className={`${prefixCls}-top`}>
-        <div className={`${prefixCls}-info`}>
+        <div className={`${prefixCls}-top-info`}>
           <Icon name={icon} className={`${prefixCls}-dot ${prefixCls}-dot-small`}/>
           <span className={`${prefixCls}-title`}>{title}</span>
         </div>
