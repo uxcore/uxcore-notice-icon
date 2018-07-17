@@ -87,7 +87,7 @@ class NoticeIcon extends React.Component {
     let emptydata = (
       <EmptyData className={`${prefixCls}-empty`} {...(emptyIcon) ? {icon:emptyIcon} : {}}>
         <div style={{ lineHeight: 2 }}>
-          <div>{emptyText}</div>
+          <div className={`${prefixCls}-empty-text`}>{emptyText}</div>
         </div>
       </EmptyData>
     )

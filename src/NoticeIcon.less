@@ -37,11 +37,15 @@
         overflow: auto;
         position: relative;
         & .@{__notice-prefix-cls}-empty{
+            color:@normal-alpha-4;
             position: absolute;
             top:50%;
             left:50%;
             transform: translate(-50%,-50%);
             user-select:none;
+            &-text{
+                color:@normal-alpha-4;
+            }
         }
     }
     &-bottom{
@@ -50,18 +54,19 @@
             display: flex;
         }
         &-text{
-            background-color: @normal-alpha-9;
+            background-color: @normal-alpha-8;
             text-align: center;
             flex-grow:1;
             line-height: 42px;
             cursor: pointer;
+            color:@dark-alpha-2;
             user-select:none;
         }
     }
     &-dot {
         vertical-align: middle;
         font-size: @_icon-size;
-        color:salmon; /* should be removed */
+        color:@normal-alpha-3; /* should be removed */
         & + .kuma-badge-dot{
             width: 6px;
             height: 6px;
@@ -69,6 +74,7 @@
             box-shadow: none;
         }
         &-small{
+            color:@normal-alpha-4;
             font-size:@_icon-size-small;
         }
     }
@@ -87,5 +93,6 @@
         vertical-align: middle;
         margin-left: 10px;
         user-select:none;
+        color:@dark-alpha-3;
     }
 }
