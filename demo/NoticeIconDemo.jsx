@@ -32,18 +32,16 @@ class Demo extends React.Component {
     // const bottomAction = { text: '查看通知', action() { console.log('Clicked'); } };
     // const bottomAction = _ => <Button/>
     return (
-      <div>
-        <NoticeIcon>
-          {/* <div style={{width:'100%',height:'100px'}}></div>
-          <div style={{width:'100%',height:'100px'}}></div>
-          <div style={{width:'100%',height:'100px'}}></div>
-          <div style={{width:'100%',height:'100px'}}></div>
-          <div style={{width:'100%',height:'100px'}}></div>
-          <div style={{width:'100%',height:'100px'}}></div>
-          <div style={{width:'100%',height:'100px'}}></div>
-          <div style={{width:'100%',height:'100px'}}></div> */}
-        </NoticeIcon>
-      </div>
+      <NoticeIcon overlayClassName="test">
+        {/* <div style={{width:'100%',height:'100px'}}></div>
+        <div style={{width:'100%',height:'100px'}}></div>
+        <div style={{width:'100%',height:'100px'}}></div>
+        <div style={{width:'100%',height:'100px'}}></div>
+        <div style={{width:'100%',height:'100px'}}></div>
+        <div style={{width:'100%',height:'100px'}}></div>
+        <div style={{width:'100%',height:'100px'}}></div>
+        <div style={{width:'100%',height:'100px'}}></div> */}
+      </NoticeIcon>
     );
   }
 }

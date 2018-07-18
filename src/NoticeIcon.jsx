@@ -53,7 +53,7 @@ class NoticeIcon extends React.Component {
       trigger, onVisibleChange, overlayClassName } = this.props;
 
     return (
-      <div className={overlayClassName}>
+      <span className={overlayClassName}>
         <Popover
           overlay={(
             <Overlay
@@ -65,7 +65,7 @@ class NoticeIcon extends React.Component {
           trigger={trigger}
           {...(onVisibleChange) ? { onVisibleChange } : {}}
         >
-          <Button className={`${prefixCls}-button`}>
+          <span className={`${prefixCls}-badge`}>
             <Badge
               dot={dot}
               count={count}
@@ -73,9 +73,9 @@ class NoticeIcon extends React.Component {
             >
               <Icon name={icon} className={`${prefixCls}-dot`} />
             </Badge>
-          </Button>
+          </span>
         </Popover>
-      </div>
+      </span>
     );
   }
 }
