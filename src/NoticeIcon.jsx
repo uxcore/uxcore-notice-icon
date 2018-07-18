@@ -10,7 +10,6 @@ import PropTypes from 'prop-types';
 import Popover from 'uxcore-popover';
 import Icon from 'uxcore-icon';
 import Badge from 'uxcore-badge';
-import Button from 'uxcore-button';
 import Overlay from './Overlay';
 
 
@@ -71,7 +70,7 @@ class NoticeIcon extends React.Component {
               count={count}
               overflowCount={overflowCount}
             >
-              <Icon name={icon} className={`${prefixCls}-dot`} />
+              <Icon name={icon} className={`${prefixCls}-dot`} usei/>
             </Badge>
           </span>
         </Popover>
