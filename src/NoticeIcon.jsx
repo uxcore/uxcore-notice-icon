@@ -91,6 +91,7 @@ class NoticeIcon extends React.Component {
           dot={dot}
           count={count}
           overflowCount={overflowCount}
+          themeType={themeType}
         >
           <Icon name={icon} className={`${prefixCls}-img`} usei />
         </Badge>
