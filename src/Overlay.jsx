@@ -60,7 +60,7 @@ class NoticeIcon extends React.Component {
   renderEmpty() {
     const { prefixCls, emptyIcon, emptyText } = this.props;
     const emptydata = (
-      <EmptyData className={`${prefixCls}-empty`} {...(emptyIcon) ? { icon: emptyIcon } : {}}>
+      <EmptyData className={`${prefixCls}-empty`} {...(emptyIcon) ? { icon: `https://g.alicdn.com/uxcore/pic/${emptyIcon}.png` } : {}}>
         <div style={{ lineHeight: 2 }}>
           <div className={`${prefixCls}-empty-text`}>{emptyText}</div>
         </div>

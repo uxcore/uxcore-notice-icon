@@ -25,14 +25,14 @@ class Demo extends React.Component {
     console.log(isDisplay);
   }
   render() {
-    // const topAction = <span onClick={this.onTopClick}>操作</span>;
+    const topAction = <span onClick={this.onTopClick}>操作</span>;
     // const bottomAction = [{"text":"查看通知","action":function(){console.log("Left Clicked")}},
     //                     {"text":"查看通知","action":function(){console.log("Middle Clicked")}},
     //                     {"text":"查看通知","action":function(){console.log("Right Clicked")}}]
     // const bottomAction = { text: '查看通知', action() { console.log('Clicked'); } };
     // const bottomAction = _ => <Button/>
     return (
-      <NoticeIcon overlayClassName="test">
+      <NoticeIcon overlayClassName="test" emptyIcon="active_empty" topAction={topAction}>
         {/* <div style={{width:'100%',height:'100px'}}></div>
         <div style={{width:'100%',height:'100px'}}></div>
         <div style={{width:'100%',height:'100px'}}></div>
