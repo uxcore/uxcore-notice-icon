@@ -40,8 +40,8 @@ class Demo extends React.Component {
         overlayClassName="test-popover"
         emptyIcon="active_empty"
         topAction={topAction}
-        onIconClick={this.onIconClick.bind(this, 'aaa')}
         className="test"
+        dot
       >
         {/* <div style={{width:'100%',height:'100px'}}></div>
         <div style={{width:'100%',height:'100px'}}></div>

@@ -90,6 +90,7 @@ Yes please! See the [CONTRIBUTING](https://github.com/uxcore/uxcore/blob/master/
 |overlayClassName|string|opitonal|-|添加在Popover上的class|
 |enablePopover|bool|optional|-|false|是否使用弹窗|
 |onIconClick|function|optional|-|点击Icon触发的事件，但在trigger mode 是 'click' 且使用弹窗时不会触发|
+|themeType|string|optional|'default'|其他可选: 'dark'|
 
 \*
 如果propTypes为object则使用默认样式渲染，object需按如下定义

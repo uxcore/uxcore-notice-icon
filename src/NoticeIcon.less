@@ -6,7 +6,7 @@
  * All rights reserved.
  */
 
-@__notice-prefix-cls: kuma-notice;
+@__notice-prefix-cls: kuma-notice-icon;
 @_icon-size:20px;
 @_icon-size-small:16px;
 
@@ -51,6 +51,9 @@
             }
         }
     }
+    &-cursor:hover{
+        cursor: pointer;
+    }
     &-bottom{
         border-top:1px solid @normal-alpha-7;
         &-wrap{
@@ -66,10 +69,12 @@
             user-select:none;
         }
     }
-    &-dot {
-        vertical-align: middle;
+    &-img {
         font-size: @_icon-size;
-        color:@normal-alpha-3; /* should be removed */
+        color:@normal-alpha-4;
+        &:hover{
+            color:@normal-alpha-3;
+        }
         & + .kuma-badge-dot{
             width: 6px;
             height: 6px;
@@ -87,5 +92,17 @@
         margin-left: 10px;
         user-select:none;
         color:@dark-alpha-3;
+    }
+
+    &-dark{
+        .@{__notice-prefix-cls}-img{
+            color:@white-alpha-2;
+            &:hover{
+                color: @white-alpha-1;
+            }
+        }
+        .kuma-badge-dot{
+            background-color: @white-alpha-1;
+        }
     }
 }

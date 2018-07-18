@@ -16,7 +16,7 @@ import Overlay from './Overlay';
 
 class NoticeIcon extends React.Component {
   static defaultProps = {
-    prefixCls: 'kuma-notice',
+    prefixCls: 'kuma-notice-icon',
     icon: 'xiaoxitixingfull',
     title: '通知',
     dot: false,
@@ -27,7 +27,7 @@ class NoticeIcon extends React.Component {
     emptyText: '暂无数据',
     bottomAction: { text: '查看通知', action: () => {} },
     enablePopover: false,
-    onIconClick: ()=>{},
+    themeType: 'default',
   };
 
   static propTypes = {
@@ -44,17 +44,19 @@ class NoticeIcon extends React.Component {
     className: PropTypes.string,
     enablePopover: PropTypes.bool,
     onIconClick: PropTypes.func,
+    themeType: PropTypes.string,
   };
 
   static displayName = 'NoticeIcon';
 
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+    };
   }
   onItemClick = () => {
     const { trigger, enablePopover, onIconClick } = this.props;
-    if (!(trigger === 'click' && enablePopover)) {
+    if (!(trigger === 'click' && enablePopover) && onIconClick) {
       onIconClick();
     }
   }
@@ -79,15 +81,18 @@ class NoticeIcon extends React.Component {
   }
 
   renderBadge() {
-    const { prefixCls, className, dot, count, overflowCount, icon } = this.props;
+    const { prefixCls, className, dot, count, overflowCount,
+      icon, trigger, onIconClick, themeType } = this.props;
+    const cursorClass = (trigger === 'click' || onIconClick) ? `${prefixCls}-cursor` : '';
+    const themeClass = (themeType === 'dark') ? `${prefixCls}-dark` : '';
     return (
-      <span className={classnames(`${prefixCls}-badge`, className)} onClick={this.onItemClick} >
+      <span className={classnames(`${prefixCls}-badge`, className, cursorClass, themeClass)} onClick={this.onItemClick}>
         <Badge
           dot={dot}
           count={count}
           overflowCount={overflowCount}
         >
-          <Icon name={icon} className={`${prefixCls}-dot`} usei />
+          <Icon name={icon} className={`${prefixCls}-img`} usei />
         </Badge>
       </span>
     );
