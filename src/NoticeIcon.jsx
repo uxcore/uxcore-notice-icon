@@ -7,6 +7,7 @@
  */
 import React from 'react';
 import PropTypes from 'prop-types';
+import classnames from 'classnames';
 import Popover from 'uxcore-popover';
 import Icon from 'uxcore-icon';
 import Badge from 'uxcore-badge';
@@ -25,6 +26,8 @@ class NoticeIcon extends React.Component {
     trigger: 'click',
     emptyText: '暂无数据',
     bottomAction: { text: '查看通知', action: () => {} },
+    enablePopover: false,
+    onIconClick: ()=>{},
   };
 
   static propTypes = {
@@ -38,6 +41,9 @@ class NoticeIcon extends React.Component {
       'leftBottom', 'rightBottom']),
     trigger: PropTypes.oneOf(['hover', 'click']),
     onVisibleChange: PropTypes.func,
+    className: PropTypes.string,
+    enablePopover: PropTypes.bool,
+    onIconClick: PropTypes.func,
   };
 
   static displayName = 'NoticeIcon';
@@ -46,35 +52,50 @@ class NoticeIcon extends React.Component {
     super(props);
     this.state = {};
   }
+  onItemClick = () => {
+    const { trigger, enablePopover, onIconClick } = this.props;
+    if (!(trigger === 'click' && enablePopover)) {
+      onIconClick();
+    }
+  }
+
+  renderWithPopover() {
+    const { prefixCls, placement, trigger, onVisibleChange, overlayClassName } = this.props;
+    return (
+      <Popover
+        overlay={(
+          <Overlay
+            {...this.props}
+          />
+        )}
+        overlayClassName={classnames(`${prefixCls}-popover`, overlayClassName)}
+        placement={placement}
+        trigger={trigger}
+        {...(onVisibleChange) ? { onVisibleChange } : {}}
+      >
+        {this.renderBadge()}
+      </Popover>
+    );
+  }
+
+  renderBadge() {
+    const { prefixCls, className, dot, count, overflowCount, icon } = this.props;
+    return (
+      <span className={classnames(`${prefixCls}-badge`, className)} onClick={this.onItemClick} >
+        <Badge
+          dot={dot}
+          count={count}
+          overflowCount={overflowCount}
+        >
+          <Icon name={icon} className={`${prefixCls}-dot`} usei />
+        </Badge>
+      </span>
+    );
+  }
 
   render() {
-    const { prefixCls, icon, dot, count, overflowCount, placement,
-      trigger, onVisibleChange, overlayClassName } = this.props;
-
     return (
-      <span className={overlayClassName}>
-        <Popover
-          overlay={(
-            <Overlay
-              {...this.props}
-            />
-          )}
-          overlayClassName={`${prefixCls}-popover`}
-          placement={placement}
-          trigger={trigger}
-          {...(onVisibleChange) ? { onVisibleChange } : {}}
-        >
-          <span className={`${prefixCls}-badge`}>
-            <Badge
-              dot={dot}
-              count={count}
-              overflowCount={overflowCount}
-            >
-              <Icon name={icon} className={`${prefixCls}-dot`} usei/>
-            </Badge>
-          </span>
-        </Popover>
-      </span>
+      this.props.enablePopover ? this.renderWithPopover() : this.renderBadge()
     );
   }
 }

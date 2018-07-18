@@ -13,16 +13,20 @@ class Demo extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      text: 'hahah',
     };
   }
-  onBottomClick() {
+  onBottomClick= () => {
     console.log('Bottom action bar is clicked');
   }
-  onTopClick() {
+  onTopClick = () => {
     console.log('Top action is activated');
   }
-  onVisibleChange(isDisplay) {
+  onVisibleChange = (isDisplay) => {
     console.log(isDisplay);
+  }
+  onIconClick = (text) => {
+    console.log(text);
   }
   render() {
     const topAction = <span onClick={this.onTopClick}>操作</span>;
@@ -32,7 +36,13 @@ class Demo extends React.Component {
     // const bottomAction = { text: '查看通知', action() { console.log('Clicked'); } };
     // const bottomAction = _ => <Button/>
     return (
-      <NoticeIcon overlayClassName="test" emptyIcon="active_empty" topAction={topAction}>
+      <NoticeIcon
+        overlayClassName="test-popover"
+        emptyIcon="active_empty"
+        topAction={topAction}
+        onIconClick={this.onIconClick.bind(this, 'aaa')}
+        className="test"
+      >
         {/* <div style={{width:'100%',height:'100px'}}></div>
         <div style={{width:'100%',height:'100px'}}></div>
         <div style={{width:'100%',height:'100px'}}></div>
