@@ -42,6 +42,7 @@ class Demo extends React.Component {
         topAction={topAction}
         className="test"
         dot
+        enablePopover
       >
         {/* <div style={{width:'100%',height:'100px'}}></div>
         <div style={{width:'100%',height:'100px'}}></div>

@@ -23,7 +23,7 @@ class NoticeIcon extends React.Component {
     count: 0,
     overflowCount: 99,
     placement: 'bottomRight',
-    trigger: 'click',
+    trigger: 'hover',
     emptyText: '暂无数据',
     bottomAction: { text: '查看通知', action: () => {} },
     enablePopover: false,
