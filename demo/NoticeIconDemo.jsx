@@ -46,14 +46,14 @@ class Demo extends React.Component {
           enablePopover
           trigger="click"
         >
-          {/* <div style={{width:'100%',height:'100px'}}></div>
-          <div style={{width:'100%',height:'100px'}}></div>
-          <div style={{width:'100%',height:'100px'}}></div>
-          <div style={{width:'100%',height:'100px'}}></div>
-          <div style={{width:'100%',height:'100px'}}></div>
-          <div style={{width:'100%',height:'100px'}}></div>
-          <div style={{width:'100%',height:'100px'}}></div>
-          <div style={{width:'100%',height:'100px'}}></div> */}
+          <div style={{width:'100%',height:'100px'}}>a</div>
+          <div style={{width:'100%',height:'100px'}}>b</div>
+          <div style={{width:'100%',height:'100px'}}>c</div>
+          <div style={{width:'100%',height:'100px'}}>d</div>
+          <div style={{width:'100%',height:'100px'}}>e</div>
+          <div style={{width:'100%',height:'100px'}}>f</div>
+          <div style={{width:'100%',height:'100px'}}>g</div>
+          <div style={{width:'100%',height:'100px'}}>h</div>
         </NoticeIcon>
       </div>
     );
