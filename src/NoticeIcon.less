@@ -12,6 +12,16 @@
 
 .@{__notice-prefix-cls} {
     &-popover {
+        &.kuma-popover-placement-bottomLeft{
+            & .kuma-popover-arrow{
+                left: 2px;
+            }
+        }
+        &.kuma-popover-placement-bottomRight{
+            & .kuma-popover-arrow{
+                right: 2px;
+            }
+        }        
         & .kuma-popover-content .kuma-popover-inner{
             max-width:320px;
             padding:0;

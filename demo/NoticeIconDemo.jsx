@@ -36,23 +36,26 @@ class Demo extends React.Component {
     // const bottomAction = { text: '查看通知', action() { console.log('Clicked'); } };
     // const bottomAction = _ => <Button/>
     return (
-      <NoticeIcon
-        overlayClassName="test-popover"
-        emptyIcon="active_empty"
-        topAction={topAction}
-        className="test"
-        dot
-        enablePopover
-      >
-        {/* <div style={{width:'100%',height:'100px'}}></div>
-        <div style={{width:'100%',height:'100px'}}></div>
-        <div style={{width:'100%',height:'100px'}}></div>
-        <div style={{width:'100%',height:'100px'}}></div>
-        <div style={{width:'100%',height:'100px'}}></div>
-        <div style={{width:'100%',height:'100px'}}></div>
-        <div style={{width:'100%',height:'100px'}}></div>
-        <div style={{width:'100%',height:'100px'}}></div> */}
-      </NoticeIcon>
+      <div>
+        <NoticeIcon
+          overlayClassName="test-popover"
+          emptyIcon="active_empty"
+          topAction={topAction}
+          className="test"
+          dot
+          enablePopover
+          trigger="click"
+        >
+          {/* <div style={{width:'100%',height:'100px'}}></div>
+          <div style={{width:'100%',height:'100px'}}></div>
+          <div style={{width:'100%',height:'100px'}}></div>
+          <div style={{width:'100%',height:'100px'}}></div>
+          <div style={{width:'100%',height:'100px'}}></div>
+          <div style={{width:'100%',height:'100px'}}></div>
+          <div style={{width:'100%',height:'100px'}}></div>
+          <div style={{width:'100%',height:'100px'}}></div> */}
+        </NoticeIcon>
+      </div>
     );
   }
 }
