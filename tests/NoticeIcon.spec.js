@@ -61,17 +61,19 @@ describe('Props', () => {
     wrapper.find('.kuma-notice-icon-badge').simulate('click');
   });
   it('onIconClick', (done) => {
+    let cbTriggered = true;
     wrapper = mount(<NoticeIcon
       enablePopover
       trigger="click"
       onIconClick={() => {
-        expect(true);
+        expect(cbTriggered).to.be(false);
         done();
       }}
     />);
     wrapper.find('.kuma-notice-icon-badge').simulate('click');
     setTimeout(() => {
-      console.log('right behaviour, onIconClick method did not be triggered');
+      cbTriggered = false;
+      expect(cbTriggered).to.be(false);
       done();
     }, 200);
   });
