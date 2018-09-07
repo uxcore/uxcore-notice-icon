@@ -34,7 +34,7 @@ class Demo extends React.Component {
     //                     {"text":"查看通知","action":function(){console.log("Middle Clicked")}},
     //                     {"text":"查看通知","action":function(){console.log("Right Clicked")}}]
     // const bottomAction = { text: '查看通知', action() { console.log('Clicked'); } };
-    // const bottomAction = _ => <Button/>
+    // const bottomAction ={ _ => <div>custom action bar</div> }
     return (
       <div>
         <NoticeIcon
