@@ -7,8 +7,8 @@
  */
 
 @__noticeIconPrefixCls: kuma-notice-icon;
-@_icon-size:20px;
-@_icon-size-small:16px;
+@__noticeIcon_normal:20px;
+@__noticeIcon_small:16px;
 
 .@{__noticeIconPrefixCls} {
     &-popover {
@@ -49,7 +49,7 @@
         flex-grow: 1;
         overflow: auto;
         position: relative;
-        & .@{__notice-prefix-cls}-empty{
+        & .@{__noticeIconPrefixCls}-empty{
             color:@normal-alpha-4;
             position: absolute;
             top:50%;
@@ -80,7 +80,7 @@
         }
     }
     &-img {
-        font-size: @_icon-size;
+        font-size: @__noticeIcon_normal;
         color:@normal-alpha-4;
         &:hover{
             color:@normal-alpha-3;
@@ -94,7 +94,7 @@
     }
     &-small{
         color:@normal-alpha-4;
-        font-size:@_icon-size-small;
+        font-size:@__noticeIcon_small;
         vertical-align: middle;
     }
 
@@ -106,7 +106,7 @@
     }
 
     &-dark{
-        .@{__notice-prefix-cls}-img{
+        .@{__noticeIconPrefixCls}-img{
             color:@white-alpha-2;
             &:hover{
                 color: @white-alpha-1;
