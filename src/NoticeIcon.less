@@ -7,110 +7,107 @@
  */
 
 @__noticeIconPrefixCls: kuma-notice-icon;
-@__noticeIcon_normal:20px;
-@__noticeIcon_small:16px;
-
+@__noticeIcon_normal: 20px;
+@__noticeIcon_small: 16px;
 .@{__noticeIconPrefixCls} {
-    &-popover {
-        &.kuma-popover-placement-bottomLeft{
-            & .kuma-popover-arrow{
-                left: 2px;
-            }
-        }
-        &.kuma-popover-placement-bottomRight{
-            & .kuma-popover-arrow{
-                right: 2px;
-            }
-        }        
-        & .kuma-popover-content .kuma-popover-inner{
-            max-width:320px;
-            padding:0;
-        }
+  &-popover {
+    &.kuma-popover-placement-bottomLeft {
+      & .kuma-popover-arrow {
+        left: 2px;
+      }
     }
-    &-container{
-        min-height: 320px;
-        max-height: 500px;
-        display: flex;
-        flex-direction: column;
-        justify-content:space-between;
+    &.kuma-popover-placement-bottomRight {
+      & .kuma-popover-arrow {
+        right: 2px;
+      }
     }
-    &-top{
-        box-sizing: border-box;
-        padding: 13px 16px;
-        border-bottom:1px solid @normal-alpha-7;
-        display: flex;
-        justify-content:space-between;
-        align-items: center;
-        &-info{
-            line-height: 18px;
-        }
+    & .kuma-popover-content .kuma-popover-inner {
+      max-width: 320px;
+      padding: 0;
     }
-    &-list{
-        flex-grow: 1;
-        overflow: auto;
-        position: relative;
-        & .@{__noticeIconPrefixCls}-empty{
-            color:@normal-alpha-4;
-            position: absolute;
-            top:50%;
-            left:50%;
-            transform: translate(-50%,-50%);
-            user-select:none;
-            &-text{
-                color:@normal-alpha-4;
-            }
-        }
+  }
+  &-container {
+    min-height: 320px;
+    max-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &-top {
+    box-sizing: border-box;
+    padding: 13px 16px;
+    border-bottom: 1px solid @normal-alpha-7;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &-info {
+      line-height: 18px;
     }
-    &-cursor:hover{
-        cursor: pointer;
+  }
+  &-list {
+    flex-grow: 1;
+    overflow: auto;
+    position: relative;
+    & .@{__noticeIconPrefixCls}-empty {
+      color: @normal-alpha-4;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      user-select: none;
+      &-text {
+        color: @normal-alpha-4;
+      }
     }
-    &-bottom{
-        border-top:1px solid @normal-alpha-7;
-        &-wrap{
-            display: flex;
-        }
-        &-text{
-            background-color: @normal-alpha-8;
-            text-align: center;
-            flex-grow:1;
-            line-height: 42px;
-            cursor: pointer;
-            color:@dark-alpha-2;
-            user-select:none;
-        }
+  }
+  &-cursor:hover {
+    cursor: pointer;
+  }
+  &-bottom {
+    border-top: 1px solid @normal-alpha-7;
+    &-wrap {
+      display: flex;
     }
-    &-img {
-        font-size: @__noticeIcon_normal;
-        color:@normal-alpha-4;
-        &:hover{
-            color:@normal-alpha-3;
-        }
-        & + .kuma-badge-dot{
-            width: 6px;
-            height: 6px;
-            top:-3px;
-            box-shadow: none;
-        }
+    &-text {
+      background-color: @normal-alpha-8;
+      text-align: center;
+      flex-grow: 1;
+      line-height: 42px;
+      cursor: pointer;
+      color: @dark-alpha-2;
+      user-select: none;
     }
-    &-small{
-        color:@normal-alpha-4;
-        font-size:@__noticeIcon_small;
-        vertical-align: middle;
+  }
+  &-img {
+    font-size: @__noticeIcon_normal;
+    color: @normal-alpha-4;
+    &:hover {
+      color: @normal-alpha-3;
     }
-
-    &-title{
-        vertical-align: middle;
-        margin-left: 10px;
-        user-select:none;
-        color:@dark-alpha-3;
+    &+.kuma-badge-dot {
+      width: 6px;
+      height: 6px;
+      top: -3px;
+      box-shadow: none;
     }
-
-    &-dark{
-        .@{__noticeIconPrefixCls}-img{
-            color:@white-alpha-2;
-            &:hover{
-                color: @white-alpha-1;
-            }
-        }
+  }
+  &-small {
+    color: @normal-alpha-4;
+    font-size: @__noticeIcon_small;
+    vertical-align: middle;
+  }
+  &-title {
+    vertical-align: middle;
+    margin-left: 10px;
+    user-select: none;
+    color: @dark-alpha-3;
+  }
+  &-dark {
+    .@{__noticeIconPrefixCls}-img {
+      color: @white-alpha-2;
+      &:hover {
+        color: @white-alpha-1;
+      }
     }
+  }
 }
