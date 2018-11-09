@@ -7,21 +7,22 @@
  */
 
 @__noticeIconPrefixCls: kuma-notice-icon;
+@__popoverPrefixCls: kuma-popover;
 @__noticeIcon_normal: 20px;
 @__noticeIcon_small: 16px;
 .@{__noticeIconPrefixCls} {
   &-popover {
-    &.kuma-popover-placement-bottomLeft {
-      & .kuma-popover-arrow {
+    &.@{__popoverPrefixCls}-placement-bottomLeft {
+      & .@{__popoverPrefixCls}-arrow {
         left: 2px;
       }
     }
-    &.kuma-popover-placement-bottomRight {
-      & .kuma-popover-arrow {
+    &.@{__popoverPrefixCls}-placement-bottomRight {
+      & .@{__popoverPrefixCls}-arrow {
         right: 2px;
       }
     }
-    & .kuma-popover-content .kuma-popover-inner {
+    & .@{__popoverPrefixCls}-content .@{__popoverPrefixCls}-inner {
       max-width: 320px;
       padding: 0;
     }
