@@ -8,8 +8,11 @@
 
 @__noticeIconPrefixCls: kuma-notice-icon;
 @__popoverPrefixCls: kuma-popover;
+@__badgePrefixCls: kuma-badge;
+
 @__noticeIcon_normal: 20px;
 @__noticeIcon_small: 16px;
+
 .@{__noticeIconPrefixCls} {
   &-popover {
     &.@{__popoverPrefixCls}-placement-bottomLeft {
@@ -85,7 +88,7 @@
     &:hover {
       color: @normal-alpha-3;
     }
-    &+.kuma-badge-dot {
+    &+.@{__badgePrefixCls}-dot {
       width: 6px;
       height: 6px;
       top: -3px;
